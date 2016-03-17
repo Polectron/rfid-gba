@@ -11,7 +11,7 @@ gamesFile.close()
 configList = 'config.json'
 configFile = open(configList)
 config = json.loads(configFile.read())
-configList.close()
+configFile.close()
 
 emulator = config["emulator"]
 device = '/dev/ttyUSB0'
