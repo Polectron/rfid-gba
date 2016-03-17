@@ -10,7 +10,7 @@ gamesFile.close()
 
 configList = 'config.json'
 configFile = open(configList)
-config = jason.loads(configFile.read())
+config = json.loads(configFile.read())
 configList.close()
 
 emulator = config["emulator"]
