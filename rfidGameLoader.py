@@ -5,10 +5,15 @@ import subprocess
 gamesList = 'games.json'
 
 gamesFile = open(gamesList)
-
 games = json.loads(gamesFile.read())
+gamesFile.close()
 
-emulator = 'visualboyadvance-m'
+configList = 'config.json'
+configFile = open(configList)
+config = jason.loads(configFile.read())
+configList.close()
+
+emulator = config["emulator"]
 device = '/dev/ttyUSB0'
 
 ser = serial.Serial(device, 9600, timeout=1)
